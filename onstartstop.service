@@ -1,0 +1,10 @@
+[Unit]
+Description="Run my app code on start/stop"
+
+[Service]
+ExecStop=/bin/bash /data/onstop.sh
+KillMode=none
+TimeoutStopSec=600
+
+[Install]
+WantedBy=multi-user.target
